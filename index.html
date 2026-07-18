@@ -1,160 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Parking System</title>
-  <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
-    header, footer {
-      background: linear-gradient(90deg, #2c3e50, #34495e);
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    /* Hero Section */
-    .hero {
-      padding: 120px 20px;
-      text-align: center;
-      background: none;
-    }
-
-    .hero h1 {
-      color: black;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero p {
-      color: black;
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    /* General Section Styles */
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 30px;
-    }
-
-    /* Features Section */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .card h3 {
-      color: #2980b9;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* Call-to-Action Section */
-    .cta {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      border-radius: 8px;
-      margin-top: 40px;
-    }
-
-    .cta h3 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    .cta a {
-      padding: 12px 25px;
-      background: #e67e22;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background: #d35400;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking System - Modern Solution</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Smart Parking System</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="booking.html">Book Slot</a>
-      <a href="Content.html">Contact</a>
-      <a href="auth.html">Login</a>
-    </nav>
-  </header>``
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-square-parking"></i> SmartPark
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">Book Slot</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Auth.html" class="login-btn">Login</a></li>
+    </ul>
+    <a href="booking.html" class="btn-primary nav-btn">Book Now</a>
+    <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to the Future of Parking</h1>
-    <p>Save time, reduce stress, and park smarter with our intelligent parking solution designed for modern cities.</p>
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Find Your Parking Space Instantly</h1>
+      <p>Real-time parking availability, online booking, secure payment and smart navigation.</p>
+      <div class="hero-buttons">
+        <a href="booking.html" class="btn-primary">Book Parking</a>
+        <a href="#features" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="assets/smart_parking_dash.png" alt="Smart Parking Dashboard">
+    </div>
+    <div class="scroll-down">
+      <a href="#stats"><i class="fa-solid fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section id="stats" class="stats">
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+      <i class="fa-solid fa-car-side"></i>
+      <h2 class="counter" data-target="5000">0</h2><span>+</span>
+      <p>Parking Slots</p>
+    </div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+      <i class="fa-solid fa-users"></i>
+      <h2 class="counter" data-target="12000">0</h2><span>+</span>
+      <p>Users</p>
+    </div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fa-solid fa-map-location-dot"></i>
+      <h2 class="counter" data-target="150">0</h2><span>+</span>
+      <p>Parking Areas</p>
+    </div>
+    <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+      <i class="fa-solid fa-server"></i>
+      <h2><span class="counter" data-target="99.9">0</span>%</h2>
+      <p>Uptime</p>
+    </div>
   </section>
 
   <!-- Features Section -->
-  <section class="section">
-    <h2>Why Choose Smart Parking?</h2>
+  <section id="features" class="features">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Why Choose Us</h2>
+      <p>Experience the best parking management features.</p>
+    </div>
     <div class="features-grid">
-      <div class="card">
-        <h3>Real-Time Slot Tracking</h3>
-        <p>Get live updates of available slots and avoid circling for hours. Our system uses sensors and cameras for accurate data.</p>
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box"><i class="fa-solid fa-square-check"></i></div>
+        <h3>Live Slot Availability</h3>
+        <p>Check available parking spaces in real-time before you arrive.</p>
       </div>
-      <div class="card">
-        <h3>Contactless Entry & Exit</h3>
-        <p>Enjoy seamless parking with QR codes or RFID cards, ensuring hygiene and speed.</p>
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box"><i class="fa-solid fa-qrcode"></i></div>
+        <h3>QR Code Entry</h3>
+        <p>Seamless and contactless entry and exit with simple QR code scanning.</p>
       </div>
-      <div class="card">
-        <h3>Automated Billing</h3>
-        <p>Integrated digital payments for hassle-free transactions — pay only for the time you park.</p>
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box"><i class="fa-regular fa-credit-card"></i></div>
+        <h3>Online Payment</h3>
+        <p>Secure online payments, pay easily via cards or digital wallets.</p>
       </div>
-      <div class="card">
-        <h3>Eco-Friendly</h3>
-        <p>Less idling means fewer emissions. Contribute to a greener city while saving fuel.</p>
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon-box"><i class="fa-solid fa-location-arrow"></i></div>
+        <h3>Navigation Assistance</h3>
+        <p>In-app navigation to guide you exactly to your booked spot.</p>
       </div>
-      <div class="card">
-        <h3>Security & Surveillance</h3>
-        <p>24/7 camera monitoring and smart alerts keep your vehicle secure at all times.</p>
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <h3>Booking History</h3>
+        <p>Keep track of all your past bookings and digital receipts easily.</p>
       </div>
-      <div class="card">
-        <h3>User-Friendly App Interface</h3>
-        <p>Bo…
+      <div class="feature-card glass" data-aos="fade-up" data-aos-delay="600">
+        <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>24/7 Security</h3>
+        <p>Round-the-clock surveillance to keep your vehicle completely safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="section-title" data-aos="fade-up">
+      <h2>How It Works</h2>
+      <p>Four simple steps to park your vehicle without hassle.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="timeline-content glass">
+          <h3>1. Search Parking</h3>
+          <p>Find nearby parking areas using our smart map interface.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+        <div class="timeline-content glass">
+          <h3>2. Select Slot</h3>
+          <p>Choose your preferred available spot and duration.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <div class="timeline-content glass">
+          <h3>3. Pay Online</h3>
+          <p>Complete your booking with our secure digital payment gateway.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-icon"><i class="fa-solid fa-car"></i></div>
+        <div class="timeline-content glass">
+          <h3>4. Park Easily</h3>
+          <p>Arrive and scan your QR code for seamless automated entry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits">
+    <div class="benefits-container">
+      <div class="benefits-image" data-aos="fade-right">
+        <img src="assets/smart_parking_illustration.png" alt="Benefits Illustration">
+      </div>
+      <div class="benefits-content" data-aos="fade-left">
+        <h2>Smart Parking Benefits</h2>
+        <p>Upgrade to a modern parking solution and experience the difference.</p>
+        <ul class="benefits-list">
+          <li><i class="fa-solid fa-circle-check"></i> Save Time</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reduce Traffic</li>
+          <li><i class="fa-solid fa-circle-check"></i> Cashless Payments</li>
+          <li><i class="fa-solid fa-circle-check"></i> Secure Parking</li>
+          <li><i class="fa-solid fa-circle-check"></i> Eco-Friendly</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="section-title" data-aos="fade-up">
+      <h2>What Our Users Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"This app has completely changed my daily commute. No more wasting time looking for a parking spot in the city center!"</p>
+        <h4>- Alex Johnson</h4>
+      </div>
+      <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <p>"The QR code entry is seamless and the interface is very user-friendly. Highly recommend for any daily driver."</p>
+        <h4>- Sarah Williams</h4>
+      </div>
+      <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"A highly reliable and secure parking system. I always know my car is safe and I love the cashless payments feature."</p>
+        <h4>- Michael Brown</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Simple & Transparent Pricing</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card glass" data-aos="flip-left" data-aos-delay="100">
+        <h3>Basic</h3>
+        <div class="price">Free</div>
+        <ul>
+          <li>Find Available Slots</li>
+          <li>Standard Navigation</li>
+          <li>Pay-as-you-go</li>
+        </ul>
+        <a href="booking.html" class="btn-secondary">Choose Basic</a>
+      </div>
+      <div class="price-card premium glass" data-aos="flip-up" data-aos-delay="200">
+        <div class="badge">Most Popular</div>
+        <h3>Premium</h3>
+        <div class="price">$9.99<span>/mo</span></div>
+        <ul>
+          <li>Advanced Reservations</li>
+          <li>Priority Support</li>
+          <li>Discounted Rates</li>
+          <li>Free Cancellations</li>
+        </ul>
+        <a href="booking.html" class="btn-primary">Get Premium</a>
+      </div>
+      <div class="price-card glass" data-aos="flip-right" data-aos-delay="300">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>For Corporate Fleets</li>
+          <li>Dedicated Account Manager</li>
+          <li>Custom Reporting</li>
+          <li>API Access</li>
+        </ul>
+        <a href="Content.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content" data-aos="zoom-in">
+      <h2>Ready to Park Smarter?</h2>
+      <p>Join thousands of users who have upgraded their parking experience.</p>
+      <a href="booking.html" class="btn-primary btn-large">Book Your Slot Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3><i class="fa-solid fa-square-parking"></i> SmartPark</h3>
+        <p>Making urban parking intelligent, seamless, and efficient.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="Auth.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-envelope"></i> support@smartpark.com</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Smart Parking System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
