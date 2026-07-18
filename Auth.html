@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Smart Parking</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f0f0f0; }
+    header, footer { background: #2c3e50; color: white; padding: 1rem 2rem; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; }
+    .auth { padding: 60px 20px; max-width: 400px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; }
+    input { width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { width: 100%; padding: 10px; background: #2c3e50; color: white; border: none; border-radius: 5px; }
+    .toggle { text-align: center; margin-top: 10px; cursor: pointer; color: #2c3e50; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Parking</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="booking.html">Book Slot</a>
+
+      <a href="Content.html">Contact</a>
+      <a href="auth.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="auth" id="login">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button onclick="alert('Login successful!')">Login</button>
+    <div class="toggle" onclick="switchForm()">Don't have an account? Sign Up</div>
+  </section>
+
+  <section class="auth" id="signup" style="display:none;">
+    <h2>Signup</h2>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button onclick="alert('Signup successful!')">Register</button>
+    <div class="toggle" onclick="switchForm()">Already have an account? Login</div>
+  </section>
+
+  <footer>&copy; 2025 Smart Parking Lot </footer>
+
+  <script>
+    function switchForm() {
+      const login = document.getElementById("login");
+      const signup = document.getElementById("signup");
+      login.style.display = login.style.display === "none" ? "block" : "none";
+      signup.style.display = signup.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

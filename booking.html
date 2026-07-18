@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slot Booking - Smart Parking</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f0f0f0; }
+    header, footer { background: #2c3e50; color: white; padding: 1rem 2rem; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .slot {
+      background: #2ecc71;
+      padding: 40px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .slot.booked {
+      background: #e74c3c;
+      cursor: not-allowed;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .box {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+
+    .available { background: #2ecc71; }
+    .booked-color { background: #e74c3c; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Parking</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="booking.html">Book Slot</a>
+      <a href="content.html">Contact</a>
+      <a href="auth.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Book Your Parking Slot</h2>
+    <div class="legend">
+      <div><div class="box available"></div> Available</div>
+      <div><div class="box booked-color"></div> Booked</div>
+    </div>
+    <div class="grid" id="slotGrid">
+      <!-- Slots will be generated here -->
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Smart Parking Lot</footer>
+
+  <script>
+    const slotGrid = document.getElementById("slotGrid");
+    const totalSlots = 20;
+
+    for (let i = 1; i <= totalSlots; i++) {
+      const slot = document.createElement("div");
+      slot.className = "slot";
+      slot.textContent = `Slot ${i}`;
+      slot.addEventListener("click", () => {
+        if (!slot.classList.contains("booked")) {
+          if (confirm(`Confirm booking for Slot ${i}?`)) {
+            slot.classList.add("booked");
+            alert(`Slot ${i} successfully booked!`);
+          }
+        } else {
+          alert(`Slot ${i} is already booked.`);
+        }
+      });
+      slotGrid.appendChild(slot);
+    }
+  </script>
+</body>
+</html>

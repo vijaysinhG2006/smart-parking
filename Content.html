@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Smart Parking</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f0f0f0; }
+    header, footer { background: #2c3e50; color: white; padding: 1rem 2rem; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; }
+    .form-section { padding: 40px 20px; max-width: 600px; margin: auto; }
+    form { display: flex; flex-direction: column; }
+    input, textarea { margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px; background-color: #2c3e50; color: white; border: none; border-radius: 5px; }
+    .address-box { margin-top: 30px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Parking</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="booking.html">Book Slot</a>
+      <a href="Content.html">Contact</a>
+      <a href="auth.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="address-box">
+      <h3>Our Office</h3>
+      <p><strong>Address:</strong><br>
+         102, Sunrise Complex,<br>
+         Near Nehrunagar Circle, Satellite Road,<br>
+         Ahmedabad, Gujarat – 380015
+      </p>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Smart Parking Lot</footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Thanks for contacting us!");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
